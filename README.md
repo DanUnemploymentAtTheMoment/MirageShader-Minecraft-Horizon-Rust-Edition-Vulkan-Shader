@@ -1,0 +1,2 @@
+# MigrateLite-Minecraft-Rust-Horizon-edition-Vulkan-Shader
+A lightweight Vulkan shader for Rust Horizons, inspired by the legendary Chocapic13 V6 Lite. Built around its performance-first philosophy, it aims to deliver beautiful visuals through intelligent rendering techniques, efficient optimizations, and carefully engineered code, bringing impressive graphical fidelity to even low-end Android devices.
