@@ -291,7 +291,23 @@ Mirage is **experimental**. It has been run in Horizon on a real device, but com
 - **Horizon**, the Rust rewrite of Minecraft: Java Edition 26.3, and its community Android port
 - Mirage's shader code is original. No source code from other shader packs is included
 
-**License:** *(add a `LICENSE` file and name it here)*
+**License:** *(Credits and Licensing
+
+Credits
+
+- Chocapic13 — Inspiration for the performance-first rendering philosophy behind Mirage.
+- Horizon — The rendering environment for which Mirage Shader Horizon is developed.
+- The Shader Community — Inspiration, feedback, testing, and continued support.
+
+License
+
+Mirage Shader Horizon is licensed under the GNU General Public License v3.0 (GPL-3.0).
+
+See the ""LICENSE"" (LICENSE) file for the complete license terms.
+
+Copyright © 2026 Dan / DanUnemploymentAtTheMoment.
+
+Mirage Shader Horizon is an independent community project and is not affiliated with, endorsed by, or associated with Mojang, Microsoft, or the Horizon developers. Minecraft is a trademark of Mojang Synergies AB.*
 
 Mirage Shader Horizon is an independent fan project. It is not affiliated with, endorsed by, or associated with Mojang, Microsoft or the Horizon developers. Minecraft is a trademark of Mojang Synergies AB.
 
