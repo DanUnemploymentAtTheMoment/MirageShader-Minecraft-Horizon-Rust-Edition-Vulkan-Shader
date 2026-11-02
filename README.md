@@ -309,8 +309,6 @@ Copyright © 2026 Dan / DanUnemploymentAtTheMoment.
 
 Mirage Shader Horizon is an independent community project and is not affiliated with, endorsed by, or associated with Mojang, Microsoft, or the Horizon developers. Minecraft is a trademark of Mojang Synergies AB.*
 
-Mirage Shader Horizon is an independent fan project. It is not affiliated with, endorsed by, or associated with Mojang, Microsoft or the Horizon developers. Minecraft is a trademark of Mojang Synergies AB.
-
 ---
 
 ## Contributing and feedback
