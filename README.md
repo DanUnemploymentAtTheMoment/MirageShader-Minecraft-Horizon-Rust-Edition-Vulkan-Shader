@@ -14,7 +14,7 @@ MirageLite is not intended to be another conventional shader that achieves visua
 
 ---
 
-Table of Contents
+# Table of Contents
 
 - "Project Vision" (#project-vision)
 - "Core Philosophy" (#core-philosophy)
@@ -37,7 +37,7 @@ Table of Contents
 
 ---
 
-1. Project Vision
+# 1. Project Vision
 
 The central idea behind MirageLite is relatively simple:
 
@@ -61,17 +61,17 @@ These are examples of a broader development philosophy: reproduce the visual res
 
 The ultimate objective is to make sophisticated graphical effects accessible to hardware that would otherwise struggle with conventional high-end shader implementations.
 
-2. Core Philosophy
+# 2. Core Philosophy
 
 MirageLite is built around five fundamental principles.
 
-2.1. Perceptual Fidelity Over Physical Accuracy
+## 2.1. Perceptual Fidelity Over Physical Accuracy
 
 A rendering technique does not necessarily need to be physically accurate to produce a convincing visual result.
 
 If an approximation can reproduce the important visual characteristics of an effect while requiring substantially fewer resources, it should be considered a legitimate alternative.
 
-2.2. Performance Is a Design Requirement
+## 2.2. Performance Is a Design Requirement
 
 Optimization should not be something added at the end of development.
 
@@ -79,19 +79,19 @@ Every rendering technique should be evaluated according to its computational cos
 
 Performance is part of the architecture itself.
 
-2.3. Minimal Rendering Complexity
+## 2.3. Minimal Rendering Complexity
 
 Avoid unnecessary rendering passes, redundant calculations, excessive texture sampling, and additional render targets whenever possible.
 
 A smaller rendering pipeline is generally easier to optimize, maintain, and adapt to different hardware configurations.
 
-2.4. Intelligent Approximation
+## 2.4. Intelligent Approximation
 
 Whenever possible, expensive graphical operations should be replaced with mathematically cheaper alternatives.
 
 This includes analytical lighting models, procedural effects, simplified reflection models, reduced sampling strategies, and temporal or spatial approximations where appropriate.
 
-2.5. Visual Consistency
+## 2.5. Visual Consistency
 
 Performance optimization should not result in a collection of disconnected graphical effects.
 
@@ -99,7 +99,7 @@ Lighting, atmospheric scattering, shadows, reflections, and environmental colora
 
 ---
 
-3. Project Objectives
+#3. Project Objectives
 
 MirageLite is being developed with the following objectives:
 
@@ -115,7 +115,7 @@ Configurability| Allow demanding effects to be disabled or adjusted independentl
 
 The project is primarily intended for lower-end Android hardware, although compatibility and performance on other supported platforms are also desirable.
 
-4. Current Development
+# 4. Current Development
 
 MirageLite is currently in its early experimental development stage.
 
@@ -123,29 +123,29 @@ The initial implementation focuses on establishing a functional rendering pipeli
 
 The first development milestone is to establish a visually coherent shader with a minimal rendering architecture, followed by iterative optimization and compatibility testing.
 
-Current priorities
+# Current priorities
 
-1. Performance optimization
+## 1. Performance optimization
 
 The current rendering techniques need further profiling and optimization. Particular attention is being given to shadow sampling, depth-based effects, cloud rendering, god rays, and post-processing operations.
 
-2. Environmental lighting
+## 2. Environmental lighting
 
 The existing lighting system needs further refinement, particularly its behavior across different dimensions.
 
-3. Dimension-specific rendering
+## 3. Dimension-specific rendering
 
 The current implementation primarily follows Overworld environmental assumptions. Separate Nether and End configurations are planned.
 
-4. Environmental animation
+## 4. Environmental animation
 
 Subtle vegetation movement is being considered as an additional visual feature, provided it can be implemented efficiently within Horizon's available shader interfaces.
 
-5. Compatibility verification
+## 5. Compatibility verification
 
 Real-world testing is necessary to verify shader loading, rendering behavior, blending configurations, and performance on actual Android hardware.
 
-5. Rendering Architecture
+## 6. Rendering Architecture
 
 MirageLite uses a deliberately minimal rendering architecture.
 
@@ -168,7 +168,7 @@ Current pipeline
                FINAL
           Output / Dithering
 
-Architectural characteristics
+## Architectural characteristics
 
 The current implementation is designed around:
 
@@ -193,7 +193,7 @@ Output dithering uses Interleaved Gradient Noise (IGN) to help reduce visible ba
 
 This approach is intended to make more efficient use of limited buffer precision without introducing additional render targets.
 
-6. Implemented Rendering Techniques
+# 6. Implemented Rendering Techniques
 
 The following techniques describe the initial v0.1 implementation. They are approximations of more sophisticated rendering effects, not physically accurate replacements.
 
@@ -225,7 +225,7 @@ Similarly, its global illumination approximation does not attempt to calculate i
 
 These techniques are deliberately selected to balance visual quality and computational efficiency.
 
-7. Performance Engineering
+# 7. Performance Engineering
 
 Performance optimization is one of the most important aspects of MirageLite.
 
@@ -233,37 +233,37 @@ The project specifically targets devices where GPU performance, memory bandwidth
 
 Optimization efforts focus on several areas.
 
-7.1. Sampling Reduction
+## 7.1. Sampling Reduction
 
 Minimize texture reads and depth-buffer sampling wherever possible.
 
 Sampling operations should be justified by their actual contribution to the final image.
 
-7.2. Simplified Mathematical Models
+## 7.2. Simplified Mathematical Models
 
 Replace unnecessarily complicated calculations with analytical approximations whenever the resulting visual difference is acceptable.
 
-7.3. Conditional Rendering
+## 7.3. Conditional Rendering
 
 Effects that are not visually relevant should avoid performing unnecessary work.
 
 For example, god rays should only be evaluated when the camera is oriented toward the sun.
 
-7.4. Render Target Reduction
+## 7.4. Render Target Reduction
 
 Avoid introducing additional buffers unless they provide a meaningful visual or computational advantage.
 
-7.5. Resolution-Aware Effects
+## 7.5. Resolution-Aware Effects
 
 Future development may explore reduced-resolution rendering for selected post-processing effects, provided the implementation is compatible with Horizon's rendering architecture.
 
-7.6. Configurable Quality
+## 7.6. Configurable Quality
 
 Expensive effects should remain independently configurable so users can prioritize performance over visual complexity when necessary.
 
 The objective is not simply to reduce the number of graphical effects, but to make each effect as efficient as reasonably possible.
 
-8. Dimension-Specific Rendering
+## 8. Dimension-Specific Rendering
 
 One of the planned improvements is to introduce dedicated environmental configurations for Minecraft's three major dimensions.
 
@@ -271,7 +271,7 @@ The current v0.1 implementation primarily follows Overworld lighting and atmosph
 
 Future versions will address these differences.
 
-Overworld
+## Overworld
 
 The Overworld serves as the primary reference environment for MirageLite.
 
@@ -285,7 +285,7 @@ Its rendering configuration includes:
 - Directional sunlight and shadows.
 - Atmospheric perspective.
 
-Nether
+## Nether
 
 The Nether requires an independent environmental lighting model.
 
@@ -301,7 +301,7 @@ Planned improvements include:
 
 The objective is to preserve the Nether's distinctive atmosphere without making the environment unnecessarily dark.
 
-End
+## End
 
 The End also requires its own environmental configuration.
 
@@ -315,7 +315,7 @@ Planned improvements include:
 
 Where possible, existing rendering functions will be reused rather than duplicated.
 
-9. Environmental Animation
+# 9. Environmental Animation
 
 Another planned feature is subtle wind-based vegetation movement.
 
@@ -335,7 +335,7 @@ In particular, block identification and vertex attribute availability may determ
 
 This feature is planned rather than implemented in the initial release.
 
-10. Compatibility and Requirements
+# 10. Compatibility and Requirements
 
 MirageLite is designed specifically for Horizon's shader-pack environment.
 
@@ -365,7 +365,7 @@ Important compatibility note
 
 MirageLite is an experimental shader pack. Compatibility with all supported devices and graphics configurations has not yet been established.
 
-11. Known Limitations
+# 11. Known Limitations
 
 The following limitations are known in the initial v0.1 release.
 
@@ -381,13 +381,13 @@ Fog blending| Separate-alpha blending behavior may vary depending on loader supp
 
 These limitations are documented so that users and contributors understand the current state of the project.
 
-12. Development Roadmap
+# 12. Development Roadmap
 
 MirageLite is intended to evolve through incremental development rather than introducing numerous expensive features at once.
 
 The following roadmap represents development intentions, not guaranteed release dates.
 
-Phase 1 — Initial Foundation
+### Phase 1 — Initial Foundation
 
 - [x] Establish the initial shader architecture.
 - [x] Implement forward rendering.
@@ -400,7 +400,7 @@ Phase 1 — Initial Foundation
 - [x] Implement basic post-processing.
 - [ ] Complete real-world Horizon testing.
 
-Phase 2 — Performance and Stability
+### Phase 2 — Performance and Stability
 
 - [ ] Identify the most expensive rendering operations.
 - [ ] Optimize shadow sampling.
@@ -411,7 +411,7 @@ Phase 2 — Performance and Stability
 - [ ] Establish consistent performance benchmarks.
 - [ ] Improve compatibility across supported Android hardware.
 
-Phase 3 — Environmental Accuracy
+### Phase 3 — Environmental Accuracy
 
 - [ ] Implement dedicated Nether lighting.
 - [ ] Implement dedicated End lighting.
@@ -420,7 +420,7 @@ Phase 3 — Environmental Accuracy
 - [ ] Refine atmospheric effects.
 - [ ] Improve water and transparency interactions.
 
-Phase 4 — Environmental Enhancements
+### Phase 4 — Environmental Enhancements
 
 - [ ] Investigate lightweight vegetation animation.
 - [ ] Introduce procedural wind movement.
@@ -428,7 +428,7 @@ Phase 4 — Environmental Enhancements
 - [ ] Refine water surface behavior.
 - [ ] Explore additional inexpensive atmospheric effects.
 
-Phase 5 — Architectural Refinement
+### Phase 5 — Architectural Refinement
 
 - [ ] Research alternative rendering techniques.
 - [ ] Investigate shader implementations designed for Vulkan and similar rendering environments.
@@ -437,7 +437,7 @@ Phase 5 — Architectural Refinement
 - [ ] Improve modularity and maintainability.
 - [ ] Expand quality and performance configuration options.
 
-13. Installation
+# 13. Installation
 
 1. Download the MirageLite release ZIP file.
 2. Do not extract the archive.
@@ -453,7 +453,7 @@ If the shader fails to load, please provide the complete loader error message wh
 
 ---
 
-14. Performance Recommendations
+# 14. Performance Recommendations
 
 If MirageLite performs poorly on your device, the following settings can help reduce rendering overhead.
 
@@ -473,7 +473,7 @@ These adjustments are intended to help identify which effects have the greatest 
 
 ---
 
-15. Research and Development Philosophy
+# 15. Research and Development Philosophy
 
 MirageLite is influenced by the broader shader-development community, particularly projects that demonstrate how sophisticated graphical effects can be achieved through efficient rendering techniques.
 
@@ -499,7 +499,7 @@ A visually convincing approximation can be more valuable than a physically accur
 
 ---
 
-16. Contributing and Feedback
+# 16. Contributing and Feedback
 
 MirageLite is an experimental project, and feedback from actual users is especially valuable during its early development.
 
@@ -533,7 +533,7 @@ Detailed reports make it easier to identify whether an issue originates from the
 
 ---
 
-17. Project Status
+# 17. Project Status
 
 Current release: v0.1
 
@@ -549,9 +549,9 @@ Features and compatibility may change as Horizon's rendering interfaces and the 
 
 ---
 
-18. Acknowledgements
+#18. Acknowledgements
 
-MirageLite is an independently developed project informed by ideas and techniques from the shader-development community.
+MirageShadee is an independently developed project informed by ideas and techniques from the shader-development community.
 
 Special conceptual inspiration comes from:
 
