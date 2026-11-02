@@ -99,7 +99,7 @@ Lighting, atmospheric scattering, shadows, reflections, and environmental colora
 
 ---
 
-#3. Project Objectives
+# 3. Project Objectives
 
 MirageLite is being developed with the following objectives:
 
