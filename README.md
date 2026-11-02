@@ -566,6 +566,6 @@ All shader implementations are developed independently. References to other proj
 ---
 
 <p align="center">
-  <strong>MirageLite</strong><br>
+  <strong>MirageShadee</strong><br>
   <em>Advanced-looking visuals. Minimal computational cost.</em>
 </p>
