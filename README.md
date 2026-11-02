@@ -549,7 +549,7 @@ Features and compatibility may change as Horizon's rendering interfaces and the 
 
 ---
 
-#18. Acknowledgements
+# 18. Acknowledgements
 
 MirageShadee is an independently developed project informed by ideas and techniques from the shader-development community.
 
